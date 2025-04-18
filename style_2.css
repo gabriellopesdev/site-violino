@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #798252;
+    font-family: "Cabin", sans-serif;
+    font-weight: 400;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("imagens/aulas-violino.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+.hero {
+    position: relative; 
+    height: 500px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.hero-content {
+    position: relative; 
+    z-index: 1; 
+    color: #331F19;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 400px;
+    max-width: 860px;
+    margin: 0 auto;
+    background-color: #F4F0EA;
+}
+
+.card {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    background-color: white;
+    font-size: 18px;
+    padding: 20px;
+    border-bottom: 2px solid;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #331F19;
+}
+
+h2 {
+    color: #331F19;
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: #331F19;
+    font-size: 1.2rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #CCD595;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid #CCD595;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: #CBBBA7;
+}
+
+select {
+    cursor: pointer;
+    background-color: #CCD595;
+    color: #331F19;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #CCD595;
+    color: #331F19;
+    padding: 1rem;
+}
+
+td {
+    color: #331F19;
+    padding: 1rem;
+    text-align: center;
+}
+
+tfoot td {
+    background-color: #331F19;
+    color: #F4F0EA;
+}
+
+details {
+    background-color: #CCD595;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+summary {
+    color: #331F19;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+ol {
+    margin-left: 1.5rem;
+}
+
+ul li {
+    color: #331F19;
+    text-align: center;
+    padding: 5px;
+    list-style-position: inside;
+}
+
+fieldset {
+    border: 2px solid #CCD595;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+legend {
+    color: #331F19;
+    padding: 0 0.5rem;
+}
+
+textarea {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #CCD595;
+    background-color: transparent;
+}
+
+button {
+    background-color: #CCD595;
+    border: none;
+    padding: 0.8rem;
+    color: #331F19;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #331F19;
+    padding: 2rem;
+    text-align: center;
+}
+
+.paragrafo-footer {
+    color: #F4F0EA;
+}
+
+footer a {
+    text-decoration: none;
+    color: #CCD595;
+}
+
+.inicio {
+    text-align: center;
+}
+
+.apresentacao {
+    margin: auto;
+    margin: 20px;
+}
+
+.img {
+    float: right;
+}
+
+.sobre {
+    padding: 25px;
+    border: 10px solid #331F19;
+}
+
+.entrevista {
+    padding: 25px;
+    border: 10px solid #331F19;
+}
+
+.Enviar {
+    margin: 10px;
+}
