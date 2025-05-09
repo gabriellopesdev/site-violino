@@ -1,0 +1,522 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/login":
+    post:
+      summary: login auth
+      parameters: []
+      responses:
+        '200':
+          description: successful
+        '401':
+          description: unauthorized
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: user@example.com
+                password:
+                  type: string
+                  example: password123
+              required:
+              - email
+              - password
+  "/api/v1/profile":
+    get:
+      summary: profile auth
+      responses:
+        '200':
+          description: successful
+        '401':
+          description: unauthorized
+  "/api/v1/forum_posts":
+    get:
+      summary: list forum_posts
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create forum_post
+      parameters: []
+      responses:
+        '201':
+          description: created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: My Forum Post
+                content:
+                  type: string
+                  example: This is the content of the forum post.
+                author_id:
+                  type: integer
+                  example: 1
+              required:
+              - title
+              - content
+              - author_id
+  "/api/v1/forum_posts/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show forum_post
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update forum_post
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Updated Title
+                content:
+                  type: string
+                  example: Updated content of the forum post.
+              required:
+              - title
+              - content
+    put:
+      summary: update forum_post
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Updated Title
+                content:
+                  type: string
+                  example: Updated content of the forum post.
+              required:
+              - title
+              - content
+    delete:
+      summary: delete forum_post
+      responses:
+        '204':
+          description: no content
+  "/api/v1/forum_topics":
+    get:
+      summary: list forum_topics
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create forum_topic
+      parameters: []
+      responses:
+        '201':
+          description: created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: My Forum Topic
+                content:
+                  type: string
+                  example: This is the content of the forum topic.
+              required:
+              - title
+              - content
+  "/api/v1/forum_topics/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show forum_topic
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update forum_topic
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Updated Title
+                content:
+                  type: string
+                  example: Updated content of the forum topic.
+              required:
+              - title
+              - content
+    put:
+      summary: update forum_topic
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Updated Title
+                content:
+                  type: string
+                  example: Updated content of the forum topic.
+              required:
+              - title
+              - content
+    delete:
+      summary: delete forum_topic
+      responses:
+        '204':
+          description: no content
+  "/api/v1/lessons":
+    get:
+      summary: list lessons
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create lesson
+      parameters: []
+      responses:
+        '201':
+          description: created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Lesson Title
+                description:
+                  type: string
+                  example: Lesson Description
+                duration:
+                  type: integer
+                  example: 60
+              required:
+              - title
+              - description
+              - duration
+  "/api/v1/lessons/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show lesson
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update lesson
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Updated Title
+                description:
+                  type: string
+                  example: Updated Description
+                duration:
+                  type: integer
+                  example: 90
+              required:
+              - title
+              - description
+              - duration
+    put:
+      summary: update lesson
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Updated Title
+                description:
+                  type: string
+                  example: Updated Description
+                duration:
+                  type: integer
+                  example: 90
+              required:
+              - title
+              - description
+              - duration
+    delete:
+      summary: delete lesson
+      responses:
+        '204':
+          description: no content
+  "/api/v1/materials":
+    get:
+      summary: list materials
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create material
+      parameters: []
+      responses:
+        '201':
+          description: created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Material Name
+                description:
+                  type: string
+                  example: Material Description
+                price:
+                  type: number
+                  format: float
+                  example: 19.99
+              required:
+              - name
+              - description
+              - price
+  "/api/v1/materials/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show material
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update material
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Updated Material Name
+                description:
+                  type: string
+                  example: Updated Material Description
+                price:
+                  type: number
+                  format: float
+                  example: 29.99
+              required:
+              - name
+              - description
+              - price
+    put:
+      summary: update material
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Updated Material Name
+                description:
+                  type: string
+                  example: Updated Material Description
+                price:
+                  type: number
+                  format: float
+                  example: 29.99
+              required:
+              - name
+              - description
+              - price
+    delete:
+      summary: delete material
+      responses:
+        '204':
+          description: no content
+  "/api/v1/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create user
+      parameters: []
+      responses:
+        '201':
+          description: created
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: John Doe
+                email:
+                  type: string
+                  example: john.doe@example.com
+                password:
+                  type: string
+                  example: password123
+              required:
+              - name
+              - email
+              - password
+  "/api/v1/users/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show user
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update user
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Updated Name
+                email:
+                  type: string
+                  example: updated.email@example.com
+              required:
+              - name
+              - email
+    put:
+      summary: update user
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Updated Name
+                email:
+                  type: string
+                  example: updated.email@example.com
+                password:
+                  type: string
+                  example: newpassword123
+              required:
+              - name
+              - email
+              - password
+    delete:
+      summary: delete user
+      responses:
+        '204':
+          description: no content
+servers:
+- url: https://localhost:3000/api/v1
+  description: Development server
+  variables:
+    host:
+      default: localhost
+      description: The host name of the server
+    port:
+      default: '3000'
+      description: The port number of the server
